@@ -1,11 +1,10 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
-
 ---
 title: test-equation
 date: 2023-06-28 21:17:58
 tags:
 ---
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
 
 $1+2=x$
 
