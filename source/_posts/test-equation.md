@@ -3,6 +3,8 @@ title: test-equation
 date: 2023-06-28 21:17:58
 tags:
 ---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script>
 
 $1+2=x$
 
