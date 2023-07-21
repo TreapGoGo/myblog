@@ -104,12 +104,20 @@ theme: hexo-theme-Claudia
 deploy:
   type: ''
 
+# math:
+#   engine: katex
+#   katex:
+#     css: https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css
+#     js: https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js
+#     config:
+#       # KaTeX config
+#       throwOnError: false
+#       errorColor: "#cc0000"
+
 math:
-  engine: katex
-  katex:
-    css: https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css
-    js: https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js
-    config:
-      # KaTeX config
-      throwOnError: false
-      errorColor: "#cc0000"
+  enable: true
+  perpage: true
+
+mathjax:
+  enable: true
+  mhchem: false
