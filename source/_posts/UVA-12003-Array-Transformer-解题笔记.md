@@ -6,7 +6,7 @@ tags: ["算法数据结构", "题解", "数据结构", "分块", "排序"]
 
 # 题目来源
 
-[UVA - 12003 - Array Transformer](https://vjudge.net/problem/UVA-12003/origin)
+[UVA - 12003 - Array Transformer](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3154)
 
 [Vjudge 页面](https://vjudge.net/problem/UVA-12003)
 
@@ -131,3 +131,9 @@ int main(){
 	return 0;
 }
 ```
+
+# 相关优化
+
+其实排序部分的那个 $\log$ 可省掉。因为每次修改只修改了一个元素，因此只需要把这个元素按照冒泡排序的方式不断和左右元素交换直到整个数组有序，就实现了 $O(s)$ 的排序操作。
+
+不过这样写还需要搞个哈希表来把原序列中的数映射到有序块中去，有点复杂，而且实际上总复杂度也并没有降低。
