@@ -1,7 +1,7 @@
 ---
 title: UVA-12003 Array Transformer 解题笔记
 date: 2023-07-27 00:52:08
-tags: ["算法数据结构", "题解", "数据结构", "分块"]
+tags: ["算法数据结构", "题解", "数据结构", "分块", "排序"]
 ---
 
 # 题目来源
@@ -50,5 +50,84 @@ $$\frac{n}{s^2}=\frac{\log s+1}{\log s-1}$$
 
 但是这种用数学方法寻找最优块长的思想是很重要的。
 
+最终时间复杂度为 $O(m\sqrt{n}\log \sqrt{n})=O(m\sqrt{n}\log n)$ 。
+
+# 注意事项
+
+块长不一定等于块数。
+
+例如，当 $n=15$ 时，块长 $s=\lfloor \sqrt{n}\rfloor=3$ ，但块数为 $5$ 。
+
 # AC代码
 
+```cpp
+#include<bits/stdc++.h>
+#define N 300100
+#define M 50010
+#define ll long long
+using namespace std;
+
+ll n, m, u, L, R, v, p;
+ll a[N], id[N];
+ll b[600][600];
+
+ll len, num, k;
+
+ll query(ll l, ll r, ll v){
+	ll lid = id[l], rid = id[r];
+	ll ans = 0;
+	if(lid == rid){ // 这个不能省略，如果省略了会把[l,r]之外的元素也算进来
+		for(int i = l; i <= r; i++){
+			if(a[i] < v) ans++;
+		}
+		return ans;
+	}
+	for(int i = l; id[i] == lid; i++){
+		if(a[i] < v) ans++;
+	}
+	for(int i = r; id[i] == rid; i--){ // 注意循环顺序
+		if(a[i] < v) ans++; 
+	}
+	for(int i = lid+1; i <= rid-1; i++){
+		ans += lower_bound(b[i]+1, b[i]+1+len, v) - (b[i]+1);
+	}
+	return ans;
+}
+
+int main(){
+	cin >> n >> m >> u;
+	len = sqrt(n);
+	num = n / len; // 块数不等于块长
+	for(int i = 1; i <= n; i++){
+		cin >> a[i];
+		id[i] = (i-1) / len + 1;
+		b[id[i]][(i-1)%len+1] = a[i];
+	}
+	
+	for(int i = 1; i <= num; i++){
+		sort(b[i]+1, b[i]+1+len);
+	}
+	
+	while(m--){
+		cin >> L >> R >> v >> p;
+		k = query(L, R, v);
+		
+		a[p] = (u*k) / (R-L+1);
+		
+		int pid = id[p];
+		int start = len * (pid-1);
+		if(pid > len*len) continue; // 最后残段暴力做就行了
+		for(int i = 1; i <= len; i++){
+			b[pid][i] = a[start+i];
+		}
+		sort(b[pid]+1, b[pid]+1+len);
+	}
+	
+	for(int i = 1; i <= n; i++){
+		cout << a[i] << endl;
+	}
+	
+	
+	return 0;
+}
+```
