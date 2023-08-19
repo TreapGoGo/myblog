@@ -149,6 +149,32 @@ PS： 风险溢价 = 风险投资收益率 - 无风险利率
 | :-------------------: | :-------------------: |
 |        损益图         |        回报图         |
 
+### 六种基本积木模块
+
+```latex {cmd=true output="png"}
+\documentclass{standalone}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tikz}
+\usepackage[UTF8]{ctex}
+% all other packages and stuff you need for the picture
+
+\begin{document}
+\begin{tikzpicture}
+
+\draw[-latex] (-4,0) -- (4,0) node[above left] {资产价格};
+\draw[-latex] (0,-4) -- (0,4) node[below left] {投资人获利};
+
+\draw[domain=-3:0, very thick] plot(\x, {\x+1});
+\draw[domain=0:3, very thick] plot(\x, 1);
+
+\draw[|<->|] (0.5,0) -- (0.5,1);
+\node at (1.3,0.5) {期权价格};
+
+\end{tikzpicture}
+\end{document}
+\end{document}
+```
+
 ## 第四节 利息的计算方法
 
 ## 第五节 现金流和货币的时间价值

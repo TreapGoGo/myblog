@@ -10,7 +10,7 @@ tags:
 
 ### 基本定义
 
-对于复数 $z=x+\mathrm{i}y\in\mathbb{C}$ ，称 $x=\mathrm{Re}z$ 为其实部， $y=\mathrm{Im}z$ 为其虚部。两复数相等，当且仅当他们的实部和虚部分别相等。用 $\overline{z}$ 或 $z^*$ 表示与 $z$ 实部相等、虚部相反的共轭复数（complex conjugation）。
+对于复数 $z=x+\mathrm{i}y\in\mathbb{C}$ ，称 $x=\mathrm{Re}z$ 为其实部， $y=\mathrm{Im}z$ 为其虚部。两复数相等，当且仅当他们的实部和虚部分别相等。用 $\overline{z}$ 或 $z^*$ 表示与 $z$ 实部相等、虚部相反的**共轭复数**（complex conjugation）。
 
 通过两个共轭复数可以得出实部和虚部，这个方法非常重要。
 
@@ -37,9 +37,9 @@ $\displaystyle \varphi=\mathrm{Arg}z$ 为辐角， $\rho$ 为模
 
 ### 黎曼球表示法（了解即可）
 
-复球面与复平面切于复球面南极点 $S$ ，复球面的北极点 $N$ 与复球面上一点 $A'$ 延长线交复平面与点 $A$ 。
+复球面与复平面切于复球面南极点 $S$ ，复球面的北极点 $N$ 与复球面上一点 $A'$ 延长线交复平面于点 $A$ 。
 
-复球面上每一点与复平面上每一点一一对应，所以可以用 $A'$ 的坐标来代表 $A$ 的坐标。
+复球面上每一点与复平面上每一点一一对应，所以可以用 $A'$ 的球坐标来代表 $A$ 的坐标。
 
 当 $A'\rightarrow N$ 时，复平面上的 $A$ 趋于无穷远点。
 
@@ -63,4 +63,32 @@ $\displaystyle \varphi=\mathrm{Arg}z$ 为辐角， $\rho$ 为模
 棣莫弗公式：本质是欧拉公式当 $\rho=1$ 时的特例
 
 $$(\cos\varphi+\mathrm{i}\sin\varphi)^n=\cos n\varphi+\mathrm{i}\sin n\varphi$$
+
+### 复数的几何意义
+
+复数与平面上的点一一对应。
+
+应用：平面曲线 $f(x,y)=0$ 化为复表示方程 $F(z)=0$ 的方法
+
+* 将  $\displaystyle\begin{cases}x=\frac{z+\overline{z}}{2} \\ y=\frac{z-\overline{z}}{2\mathrm i}\end{cases}$ 代入原方程 $f(x,y)=0$ ，即可得到以复数 $z$ 表示的方程。
+
+两个复数相加，符合对角线规则。两个复数作差，符合三角形规则。
+
+根据“平行四边形对角线平方和等于四条边平方和”，可得
+
+$$|z_1+z_2|^2+|z_1-z_2|^2=2(|z_1|^2+|z_2|^2)$$
+
+对于焦点在 $F_1,F_2$ 的椭圆上的一点 $P(x,y)$ ，易知 $\displaystyle|PF_1|=\left|x-(-\frac{c}{2})+(y-0)\mathrm i\right|=\left|z-\frac{c}{2}\right|$ ，同理 $\displaystyle|PF_2|=\left|z-\frac{c}{2}\right|$ .
+
+根据椭圆的定义，椭圆方程也可以表示为  
+
+$$\displaystyle \left|z+\frac{c}{2}\right|+\left|z-\frac{c}{2}\right|=2a$$ 
+
+同理，直线 $ax+by+c=0$ 的复表示方程为
+
+$$(a-\mathrm{i}b)z+(a+\mathrm{i}b)\overline{z}+2c=0$$
+
+圆 $(x-a)^2+(y-b)^2=r^2$ 的复表示方程为
+
+$$|z-(a+\mathrm{i}b)|=r$$
 
