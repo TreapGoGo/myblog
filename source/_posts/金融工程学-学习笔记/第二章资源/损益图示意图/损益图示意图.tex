@@ -1,0 +1,14 @@
+\documentclass[UTF8]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{ctex}
+
+\begin{document}
+\begin{tikzpicture}
+    \draw[-latex] (-5,0) -- (5,0) node[above] {价格$\Delta P$};
+    \draw[-latex] (0,-5) -- (0,5) node[left] {损益$\Delta V$};
+
+    \draw[domain=-4:4, thick] plot (\x, {\x});
+    \node at (-2,-1) {多头};
+\end{tikzpicture}
+\end{document}
