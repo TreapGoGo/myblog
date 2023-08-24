@@ -1,0 +1,13 @@
+\documentclass[UTF8]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{ctex}
+
+\begin{document}
+\begin{tikzpicture}
+    \draw[-latex] (-4,0) -- (4,0) node[above] {资产价格};
+    \draw[-latex] (0,-4) -- (0,4) node[left] {投资人获利};
+
+    \draw[domain=-3:3, thick] plot (\x, {\x});
+\end{tikzpicture}
+\end{document}

@@ -151,29 +151,14 @@ PS： 风险溢价 = 风险投资收益率 - 无风险利率
 
 ### 六种基本积木模块
 
-```latex {cmd=true output="png"}
-\documentclass{standalone}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{tikz}
-\usepackage[UTF8]{ctex}
-% all other packages and stuff you need for the picture
+| ![标的资产多头](.\第二章资源\标的资产多头\标的资产多头.png) | ![多头买权](.\第二章资源\多头买权\多头买权.png) | ![空头卖权](.\第二章资源\空头卖权\空头卖权.png) |
+| :---------------------------------------------------------: | :---------------------------------------------: | :---------------------------------------------: |
+|                        标的资产多头                         |                    多头买权                     |                    空头卖权                     |
 
-\begin{document}
-\begin{tikzpicture}
 
-\draw[-latex] (-4,0) -- (4,0) node[above left] {资产价格};
-\draw[-latex] (0,-4) -- (0,4) node[below left] {投资人获利};
-
-\draw[domain=-3:0, very thick] plot(\x, {\x+1});
-\draw[domain=0:3, very thick] plot(\x, 1);
-
-\draw[|<->|] (0.5,0) -- (0.5,1);
-\node at (1.3,0.5) {期权价格};
-
-\end{tikzpicture}
-\end{document}
-\end{document}
-```
+| ![标的资产空头](.\第二章资源\标的资产空头\标的资产空头.png) | ![空头买权](.\第二章资源\空头买权\空头买权.png) | ![多头卖权](.\第二章资源\多头卖权\多头卖权.png) |
+| :---------------------------------------------------------: | :---------------------------------------------: | :---------------------------------------------: |
+|                        标的资产空头                         |                    空头买权                     |                    多头卖权                     |
 
 ## 第四节 利息的计算方法
 
