@@ -20,7 +20,7 @@ $$y=\frac{z-\overline{z}}{2\mathrm{i}}$$
 
 复数与复平面上的点一一对应，与向量一一对应。
 
-复数的表示方法：
+复数的表示方法： 
 
 1. 复向量 $\overrightarrow{OP}$ 
 2. 三角函数表示法（极坐标） $\displaystyle z=\rho\cos\varphi+\mathrm{i}\rho\sin\varphi$ ，
