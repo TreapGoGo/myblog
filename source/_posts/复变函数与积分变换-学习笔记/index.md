@@ -308,3 +308,63 @@ $$
 ### 双曲函数与反双曲函数
 
 略
+
+# 第三章 复积分
+
+## 定义与性质
+
+将复平面内的一条光滑有向曲线 $C$ 划分成无穷个小段 $\Delta z_k$ ，每一段的长度趋近于 $0$ ，令 $\displaystyle\lambda=\max_{1\le k\le n}|\Delta z_k|$ ，在每个小段 $\Delta z_k$ 上取一点 $\zeta_k$ 。
+
+若 $\displaystyle \lim_{\lambda\to 0} {\sum_{k=1}^n f(\zeta_k)\Delta z_k}$ 存在，则称之为 $f(z)$ 沿曲线 $C$ 的积分，记为 $\displaystyle \int_C f(z)\mathrm{d}z$ 。
+
+注意：
+
+1. 和式中的 $\Delta z_k$ 是一个复数，而不是这个复数的模。
+2. 曲线积分是有方向的， $\displaystyle \int_{C^-} f(z)\mathrm{d}z$ 代表沿曲线 $C$ 负方向的积分。
+3. 特别地， $\displaystyle \oint_{\varGamma} f(z)\mathrm{d}z$ 表示沿着**闭合**曲线 $\displaystyle\varGamma$ 逆时针方向的积分。
+
+性质：
+
+1. 满足线性运算规律，即 $\displaystyle\int_C[\alpha f(z)+\beta g(z)]\mathrm{d}z=\alpha\int_C f(z)\mathrm{d}z+\beta\int_C g(z)\mathrm{d}z$ 。
+2. 反向积分的结果为相反数，即 $\displaystyle \int_C f(z)\mathrm{d}z=-\int_{C^-} f(z)\mathrm{d}z$。
+3. 两端连续曲线积分可加，即 $\displaystyle \int_C f(z)\mathrm{d}z=\int_{C_1} f(z)\mathrm{d}z+\int_{C_2} f(z)\mathrm{d}z$ ，其中 $C=C_1+C_2$ 。
+4. 积分的有界性，即 $\displaystyle \left| \int_C f(z)\mathrm{d}z\right| \le  \int_C |f(z)||\mathrm{d}z| = \int_C |f(z)|\mathrm{d}s \le ML$ ，其中 $\displaystyle M=\max_{z\in C}|f(z)|$ ， $L$ 为曲线 $C$ 的弧长。
+5.  $\displaystyle\int_C |f(z)|\mathrm{d}s$ 又被称为第一类曲线积分。
+
+## 计算
+
+### 化为第二类曲线积分
+
+$$
+\int_C {f(z)} \mathrm{d} {z}
+\begin{aligned}
+    & = \int{(u+\mathrm{i}v)} (\mathrm{d}x+\mathrm{i}\mathrm{d}y )
+    & = \int_C (u\mathrm{d}x-v \mathrm{d} y) + \mathrm{i}\int_C (v \mathrm{d}x + u \mathrm{d}y)
+\end{aligned}
+$$
+
+格林公式：设 $D$ 为单连通区域，边界 $C$ 分段光滑，函数 $P(x,y),Q(x,y)$ 在 $\overline{D}=D+C$ 上的偏导数连续，则
+
+$$
+\oint_{C} {P}\mathrm{d} {x} + Q \mathrm{d} y=\iint_{D} \left(\frac{\partial {Q}}{\partial {x}}+\frac{\partial {P}}{\partial {y}}\right) \mathrm{d} {x} \mathrm{d} {y}
+$$
+
+注意PQ换位置。
+
+### 直接化为定积分
+
+设曲线 $C:z=z(t)=x(t)+\mathrm{i}y(t)，t:a\to b$ ，则
+
+$$
+\int_C{f(z)} \mathrm{d} {z}=\int_{a}^{b}{f[z(t)]} z'(t)\mathrm{d} {t} 
+$$ 
+
+$$ 
+z'(t)=x'(t)+\mathrm{i}y'(t)
+$$
+
+### 其他方法
+
+* 利用原函数计算，即 $\displaystyle \int_C{f(z)} \mathrm{d} {z}=F(z)|_{z_0}^{z_1}$ 
+* 利用柯西积分公式、高阶导数公式
+* 利用留数计算
