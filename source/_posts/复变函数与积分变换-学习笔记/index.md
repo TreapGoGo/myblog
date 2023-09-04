@@ -4,6 +4,12 @@ date: 2023-07-26 06:24:50
 tags:
 ---
 
+# 前言
+
+本文由周国全老师的数学物理方法、翔翔的学习频道在B站上传的视频总结而来，借用了华中科技大学的讲义。
+
+感谢周国全老师、UP主翔翔和华中科技大学！
+
 # 第一章 解析函数
 
 ## 第一节 复数及其运算
@@ -155,7 +161,7 @@ $$
 
 ### 解析与柯西-黎曼条件
 
-若 $f(z)$ 在邻域 $U(z_0)$ 中处处可导，则称 $f(z)$ 在 $z_0$ 处解析。
+若 $f(z)$ 在邻域 $U(z_0)$ 中处处可导，则称 $f(z)$ 在 $z_0$ 处解析。解析又称为全纯。
 
 解析必然可导，可导不一定解析
 
@@ -193,14 +199,112 @@ $$
 \mathrm{e}^z=\mathrm{e}^{x+\mathrm{i}y}=\mathrm{e}^x(\cos y+\mathrm{i}\sin y)
 $$
 
-特点：
+性质：
 
-1. $\displaystyle|\mathrm{e}^z|=\mathrm{e}^x$
-2. $\text{Arg } \mathrm{e}^z=y+2k \mathrm{\pi}$
-3. 周期为 $2 \mathrm{\pi} \mathrm{i}$
+1. 是单值函数，因为定义中的 $\mathrm{e}^x, \cos y, \sin y$ 都是单值函数。
+2.  $\mathrm{e}^z$ 除无穷远点外处处有定义。当 $y=0$ 时， $\mathrm{e}^z=\mathrm{e}^x$ ，此时满足 $\displaystyle\lim_{x\to -\infty} {\mathrm{e}^z}=0,\lim_{x\to +\infty} {\mathrm{e}^z}=+\infty$ .
+3.  $\displaystyle|\mathrm{e}^z|=\mathrm{e}^x$ ，注意这个等式两边都是实数。
+4.  $\displaystyle (\mathrm{e}^z)'=\mathrm{e}^z$ 
+5. $\text{Arg } \mathrm{e}^z=y+2k \mathrm{\pi},  (k=0,\pm1,\pm2,\cdots)$
+6. 周期为 $2 \mathrm{\pi} \mathrm{i}$ 。这个周期是对于 $z$ 的周期，而不是对于 $x$ 或 $y$ 的周期。
+
+![指数函数周期性示意图](指数函数周期性示意图.png)
+
+指数函数非常重要。其他的初等函数都通过指数函数来定义。
 
 #### 对数函数
 
+对数函数定义为指数函数的反函数。满足方程 $\mathrm{e}^w=z$ 的函数 $w=f(z)$ 就是对数函数，记作 $w=\text{Ln }z$ 。
+
+推导过程如下：令 $z=r \mathrm{e}^{\mathrm{i}\theta},w=u+\mathrm{i}v$ ，代入定义式 $e^w=z$ 得到
+
 $$
-w=\text{Ln } z=\ln |z|+\mathrm{i}(\theta+2k \mathrm{\pi})
+\mathrm{e}^u\cdot \mathrm{e}^{\mathrm{i}v} = r\cdot \mathrm{e}^{\mathrm{i}\theta}
 $$
+
+为了使得该等式成立，需要满足：
+
+$$
+\left\{
+\begin{aligned}
+    & u=\ln {r}=\ln {|z|} \\
+    & v=\theta=\text{Arg }z
+\end{aligned}
+\right.
+$$
+
+综合上述式子，得到 $\text{Ln }z$ 的具体计算公式：
+
+$$
+w=\text{Ln } z=\ln |z|+\mathrm{i}(\theta+2k \mathrm{\pi}), (k=0,\pm1,\pm2,\cdots)
+$$
+
+性质：
+
+1.  $\text{Ln } z$ 是多值函数。 $k=0$ 时的函数值是函数的主值，记为 $w=\ln {z}$ ，这就是一个单值函数。对于某一个确定的 $k$ ，称 $w=\ln {z}+2k \mathrm{\pi}\mathrm{i}$ 为 $\text{Ln }z$ 的一个分支。
+2. 定义域为 $z\ne0$ 。这是因为 $\ln|z|,\text{arg }z$ 在原点都没有意义，也可以理解为 $\mathrm{e}^w\ne0$ 。
+3.  $\text{Ln } z$ 的各个分支在除去原点和负实轴的复平面内连续且解析，且满足 $\displaystyle \frac{\mathrm{d} {\text{Ln }z}}{\mathrm{d} {z}}=\frac{\mathrm{d} {\ln {z}}}{\mathrm{d} {z}} = \frac{1}{z}$ 。
+
+### 幂函数
+
+其定义为：
+
+$$
+w=z^\alpha=\mathrm{e}^{\alpha\text{Ln }z}
+$$
+
+性质：
+
+1.  $(z^\alpha)'=\alpha z^{\alpha-1}$ 
+2.  $z^0=1$ 
+3.  $\displaystyle z^\frac{m}{n}=\sqrt[n]{z^m}$ 
+4.  若 $\alpha$ 为无理数或复数， $z^\alpha$ 一般是多值函数，此时处原点与负实轴外处处解析。
+
+### 三角函数
+
+根据欧拉公式 $\mathrm{e}^{\mathrm{i}\theta}=\cos\theta+\mathrm{i}\sin\theta$ ，有 $\mathrm{e}^{-\mathrm{i}\theta}=\cos\theta-\mathrm{i}\sin\theta$ 
+
+故有
+
+$$
+\cos \theta=\frac{\mathrm{e}^{\mathrm{i}\theta}+\mathrm{e}^{-\mathrm{i}\theta}}{2} \\
+\sin \theta=\frac{\mathrm{e}^{\mathrm{i}\theta}-\mathrm{e}^{-\mathrm{i}\theta}}{2 \mathrm{i}} 
+$$
+
+将其中的 $\theta$ 全部换成 $z$ ，得到正余弦函数的定义：
+
+$$
+\cos z=\frac{\mathrm{e}^{\mathrm{i}z}+\mathrm{e}^{-\mathrm{i}z}}{2} \\
+\sin z=\frac{\mathrm{e}^{\mathrm{i}z}-\mathrm{e}^{-\mathrm{i}z}}{2 \mathrm{i}} 
+$$
+
+其他三角函数的定义仿照实变函数退出即可。
+
+性质:
+
+1. 是单值函数。
+2. 周期性、可导性、奇偶性、零点与实变函数一样。
+3. 所有三角公式依然适用。
+4. 有界性不成立，因为 $|\cos z|\le1,|\sin z|\le1$ 显然不满足。
+
+### 反三角函数
+
+运用三角函数的定义，求出使得 $\cos w=z$ 成立的 $w$ ，便可定义 $w=\text{Arccos }z$ 。
+
+$$
+z=\cos w= \frac{\mathrm{e}^{\mathrm{i}w}+\mathrm{e}^{-\mathrm{i}w}}{2} \\
+\Rightarrow (\mathrm{e}^{\mathrm{i}w})^2-2z\mathrm{e}^{\mathrm{i}w}+1=0 \\
+\Rightarrow \mathrm{e}^{\mathrm{i}w}=z+\sqrt{z^2-1} \\
+\Rightarrow w=\text{Arccos }z=-\mathrm{i}\text{Ln }(z+\sqrt{1+z^2})
+$$
+
+同理可得
+
+$$
+\text{Arcsin }z =-\mathrm{i}\text{Ln }(\mathrm{i}z+\sqrt{1-z^2})\\
+\text{Arctan }z = \frac{\mathrm{i}}{2} \text{Ln }\frac{\mathrm{i}+z}{\mathrm{i}-z}
+$$
+
+### 双曲函数与反双曲函数
+
+略
