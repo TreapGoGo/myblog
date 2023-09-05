@@ -581,7 +581,7 @@ $$
 求收敛半径的方法依然是实变中的两个：比值法和根式法。
 
 1. 比值法： $\displaystyle R=\lim_{n\to +\infty} {\frac{|a_n|}{|a_{n+1}|}}$ 
-2. 根式法： $\displaystyle R=\lim_{n\to +\infty} {\sqrt[n]{|c_n|}}$ 
+2. 根式法： $\displaystyle R=\lim_{n\to +\infty} \frac{1}{\sqrt[n]{|c_n|}}$ 
 
 ### 幂级数的性质
 
@@ -628,3 +628,172 @@ e^z = \sum_{n=0}^{+\infty} \frac{z^n}{n!} = 1+z+\frac{z^2}{2!}+\frac{z^3}{3!}+\c
 $$
 
 一般来讲，如果直接求导存在困难，应当考虑把待展开的函数化成已知的级数形式，然后把它当做复合函数，用代换性质作展开。
+
+## 第四节 洛朗级数
+
+### 洛朗定理
+
+泰勒展开具有局限性。如果函数存在一个奇点，那么奇点所在的圆周与圆周以外的区域都没法展开了，因为函数在这些区域不解析。
+
+为了弥补这个局限性，我们将其推广为洛朗级数。洛朗级数引入了负次幂项，使得圆周以外的区域也可以展开。
+
+洛朗级数的展开域不是圆形的，而是环形的。
+
+> 设函数 $f(z)$ 在环形域 $D:R_1<|z-z_0|<R_2$ 内解析，则 $f(z)$ 在环域内满足
+>
+> $$f(z)=\sum_{n=-\infty}^{+\infty} a_n(z-z_0)^n$$
+>
+> 其中 $\displaystyle a_n=\frac{1}{2 \mathrm{\pi} \mathrm{i}} \oint_{C} {\frac{f(\zeta)}{(\zeta-z_0)^{n+1}}}\mathrm{d} {\zeta},(n=0,\pm1,\pm2,\cdots)$ ， $C$ 为环域内绕 $z_0$ 的任意一条简单闭合曲线。
+
+证明略。
+
+注意：
+
+1. 洛朗级数的意义在于，它允许函数在环域的圆心 $z_0$ 处以及 $z_0$ 附近不解析。
+2. 洛朗级数的正次幂项和被称为**解析部分**，负次幂项和被称为**主要部分**。
+3. 当 $R_1=0$ 且函数在 $z_0$ 处解析（也就是能取到 $0$ ）的时候，此时环内完全解析，负数次幂的积分每一项积出来都是 $0$ ，洛朗级数就退化为泰勒级数。
+4. 可以理解成，这个环状域其实是由一个大的实心域挖出一个空心得来的，解析部分描述的是大的实心域，而主要部分描述的就是被挖空的部分，两个部分相加抵消，得到了环状部分的展开式。
+
+有了洛朗级数以后，我们如果要求某个点 $z_0$ 的展开，就不再需要从原点到 $z_0$ 之间的区域完全解析了，只需要这个 $z_0$ 所在的圆周附近存在一个解析环就可以了。
+
+当然，解析环也不是任意划分的。为了方便，一般的处理方法是找到函数的所有奇点，以奇点所在的那些圆周作为各个环的分界线，得到若干个解析环，然后在各个环内分别展开。
+
+# 第四章 留数
+
+## 第一节 孤立奇点
+
+### 零点
+
+零点就是方程 $f(z)=0$ 的根。
+
+如果函数 $f(z)$ 可以表示为 $(z-z_0)^m \varphi(z)$ ，且 $\varphi(z_0)\ne0$ ，则称 $z=z_0$ 是 $f(z)$ 的 $m$ 阶零点。也就是说，把 $z-z_0$ 这个因子完全分离出来，能分离出多少个，就是多少阶零点。
+
+显然，对于不恒为零的解析函数，其零点是孤立的。也就是说，在零点的一个小邻域内，不存在其他零点。
+
+理由也很简单，我用自己的语言描述一下就是：既然函数解析又不恒为 $0$ ，那么其导数自然也不恒为 $0$ ，函数在 $z_0$ 点附近的各阶变化率必然不都为 $0$ 。那么我们往 $z_0$ 的任意方向施加一个很小的增量，函数值必然要发生变化，不可能继续保持为 $0$ ，也就不存在其他的零点。
+
+### 孤立奇点
+
+使得函数在其去心邻域内解析的奇点就是孤立奇点。
+
+孤立奇点类比于实变函数的间断点，其分类方式与实变函数的间断点类似。但是，要进行严谨的分类，需要借助洛朗级数。
+
+* 可去奇点：类比可去间断点或跳跃间断点。以可去奇点为圆心的洛朗级数展开式不包含负次幂项。
+* N阶极点：以N阶极点为圆心的洛朗级数展开式只包含有限个（具体地，N个）负幂次项。特殊的，若N为1，称为简单极点。
+* 本性奇点：类比于无穷间断点。以本性奇点为圆心的洛朗级数展开包含无数个负幂次项。
+
+## 第二节 留数
+
+### 定义
+
+设 $z_0$ 为函数 $f(z)$ 的孤立奇点，将 $f(z)$ 在 $z_0$ 的去心邻域内展开成洛朗级数
+
+$$
+f(z) = \sum_{n=-\infty}^{+\infty} a_n(z-z_0)^n = \cdots+\frac{a_{-1}}{z-z_0}+a_0+a_1(z-z_0)+\cdots
+$$
+
+则称 $a_{-1}$ 为 $f(z)$ 在 $z_0$ 处的留数，记作
+
+$$
+\text{Res}[f(z),z_0]=a_{-1}=\frac{1}{2 \mathrm{\pi} \mathrm{i}} \oint_{C} {f(z)}\mathrm{d} {z}
+$$
+
+其中 $C$ 是 $z_0$ 的去心邻域内绕 $z_0$ 的一条简单闭合曲线。
+
+有时直接称 $\displaystyle \frac{1}{2 \mathrm{\pi} \mathrm{i}} \oint_{C} {f(z)}\mathrm{d} {z}$ 为 $f(z)$ 在 $z_0$ 处的留数，要和形如 $\displaystyle \frac{1}{2 \mathrm{\pi} \mathrm{i}} \oint_{C} {f(z)}\mathrm{d} {z}$ 的式子混个脸熟。
+
+### 计算方法
+
+对于可去奇点，留数为 $0$ 。
+
+对于本性奇点，需要使用最一般的方法，将其展开为洛朗级数，去其负一次幂的系数 $a_{-1}$ 。
+
+对于极点，若 $z_0$ 为 $f(z)$ 的 $m$ 阶极点，则有
+
+$$
+\text{Res}[f(z),z_0]=\frac{1}{(m-1)!}\lim_{z\to z_0} {\frac{\mathrm{d}^{m-1}}{\mathrm{d}z^{m-1}}}[(z-z_0)^mf(z)]
+$$
+
+特别地，
+
+1. 若 $z_0$ 为 $f(z)$ 的简单极点，则 $\displaystyle \text{Res}[f(z),z_0]=\lim_{z\to z_0} {(z-z_0)}f(z)$ 。
+2. 若 $\displaystyle f(z)=\frac{P(z)}{Q(z)},Q(z_0)=0,Q'(z_0)\ne0,P(z_0)\ne0$ ，且 $P(z),Q(z)$ 在 $z_0$ 处解析，则 $\displaystyle \text{Res}[f(z),z_0]=\frac{P(z_0)}{Q'(z_0)}$ 。也就是说，如果奇点的产生只是由于分母为零导致的，那么留数就是分子的函数值除以分母的导数。
+
+### 留数定理
+
+大的要来啦！！！
+
+> 设函数 $f(z)$ 在区域 $D$ 内除有限个孤立奇点 $z_1,z_2,\cdots,z_n$ 外处处解析，在边界 $C$ 上解析，则有
+>
+> $$\oint_{C} {f(z)}\mathrm{d} {z} = 2 \mathrm{\pi} \mathrm{i} \sum_{k=1}^n \text{Res}[f(z),z_k]$$
+
+这是本课程到目前为止，最重要、最强大也是最神奇的一个知识。
+
+记忆：求闭合曲线的积分，只需要求出其包住的所有奇点的留数的和，再乘上 $2 \mathrm{\pi} \mathrm{i}$ 即可。
+
+证明略，例题略。
+
+### 函数在无穷远点处的留数
+
+不是特别重要，仅做简单介绍。
+
+如果函数在无穷远点的去心邻域 $R<|f(z)|<+\infty$ 内解析，则称点 $\infty$ 为 $f(z)$ 的孤立奇点。
+
+处理这种问题通常使用换元法，令 $\displaystyle z=\frac{1}{\xi}$ ，然后研究 $\displaystyle f(\frac{1}{\xi})$ 在原点处的性态即可。
+
+## 第三节 运用留数求定积分
+
+### 形如 $\int_{0}^{2 \mathrm{\pi}}{R(\cos \theta,\sin \theta)} \mathrm{d} {\theta}$ 的积分
+
+要求： $R(u,v)$ 是 $u,v$ 的有理函数。
+
+方法：
+
+> 令 $z=\mathrm{e}^{\mathrm{i}\theta}=\cos\theta+\sin\theta$ ，则 $\mathrm{d}z=\mathrm{i}z \mathrm{d}\theta$ ，可得 $\displaystyle \mathrm{d}\theta=\frac{\mathrm{d} {z}}{\mathrm{i} {z}}$ 
+> 
+>  $\displaystyle\cos z=\frac{\mathrm{e}^{\mathrm{i}z}+\mathrm{e}^{-\mathrm{i}z}}{2}=\frac{z+z^{-1}}{2}=\frac{z^2+1}{2z}$ 
+> 
+>  $\displaystyle\sin z=\frac{\mathrm{e}^{\mathrm{i}z}-\mathrm{e}^{-\mathrm{i}z}}{2 \mathrm{i}} = \frac{z-z^{-1}}{2 \mathrm{i}}=\frac{z^2-1}{2 \mathrm{i} z}$ 
+>
+> 代入待求积分，转化为复积分，再用留数定理计算
+>
+> $\displaystyle\int_{0}^{2 \mathrm{\pi}}{R(\cos \theta,\sin \theta)} \mathrm{d} {\theta}=\oint_{|z|=1} {R\left(\frac{z^2+1}{2z},\frac{z^2-1}{2 \mathrm{i} z}\right)} \frac{1}{\mathrm{i}z} \mathrm{d} {z}=2 \mathrm{\pi} \mathrm{i} \sum_{k} \text{Res}[f(z),z_k]$
+
+
+### 形如 $\int_{-\infty}^{+\infty}{R(x)} \mathrm{d} {x}$ 的积分
+
+要求：
+
+1.  $R(x)$ 是有理分式函数；
+2. 分母的次数比分子的次数至少高 2 次；
+3. 分母无实零点 
+
+方法：
+
+> 直接将 $R(x)$ 当做复变函数
+>
+> $\displaystyle\int_{-\infty}^{+\infty}{R(x)} \mathrm{d} {x} = 2 \mathrm{\pi} \mathrm{i} \sum_{k} \text{Res}[f(z),z_k]$
+>
+> 其中， $z_k$ 是 $R(z)$ 在**上半平面内**的孤立奇点。
+
+### 形如 $\int_{-\infty}^{+\infty}{R(x)\mathrm{e}^{\mathrm{i}ax}} \mathrm{d} {x}$ 的积分
+
+要求：
+
+1.  $R(x)$ 是有理分式函数；
+2. 分母的次数比分子的次数至少高 1 次；
+3. 分母无实零点 
+
+方法：
+
+>  $\displaystyle\int_{-\infty}^{+\infty}{R(x)\mathrm{e}^{\mathrm{i}ax}} \mathrm{d} {x} = 2 \mathrm{\pi} \mathrm{i} \sum_{k} \text{Res}[R(z)\mathrm{e}^{\mathrm{i}az},z_k]=A+\mathrm{i}B$
+>
+> 特别地， $\displaystyle\int_{-\infty}^{+\infty}{R(x)\cos ax} \mathrm{d} {x}=A, \displaystyle\int_{-\infty}^{+\infty}{R(x)\sin ax} \mathrm{d} {x}=B$ 
+
+### 第二、三型积分有实孤立奇点的情况
+
+对于上述的第二、第三型积分，如果 $R(z)$ 在上半平面有孤立奇点 $z_1,z_2,\cdots,z_m$ ，在实轴上有孤立奇点 $x_1,x_2,\cdots,x_n$ 则有
+
+$$
+\int_{-\infty}^{+\infty}{f(x)} \mathrm{d} {x} = 2 \mathrm{\pi} \mathrm{i} \sum_{k=1}^m \text{Res}[f(z),z_k] + \mathrm{\pi} \mathrm{i} \sum_{k=1}^n \text{Res}[f(z),x_k]
+$$
