@@ -743,7 +743,9 @@ $$
 
 ## 第三节 运用留数求定积分
 
-### 形如 $\int_{0}^{2 \mathrm{\pi}}{R(\cos \theta,\sin \theta)} \mathrm{d} {\theta}$ 的积分
+### 第一型积分
+
+形如 $\int_{0}^{2 \mathrm{\pi}}{R(\cos \theta,\sin \theta)} \mathrm{d} {\theta}$ 的积分
 
 要求： $R(u,v)$ 是 $u,v$ 的有理函数。
 
@@ -760,7 +762,9 @@ $$
 > $\displaystyle\int_{0}^{2 \mathrm{\pi}}{R(\cos \theta,\sin \theta)} \mathrm{d} {\theta}=\oint_{|z|=1} {R\left(\frac{z^2+1}{2z},\frac{z^2-1}{2 \mathrm{i} z}\right)} \frac{1}{\mathrm{i}z} \mathrm{d} {z}=2 \mathrm{\pi} \mathrm{i} \sum_{k} \text{Res}[f(z),z_k]$
 
 
-### 形如 $\int_{-\infty}^{+\infty}{R(x)} \mathrm{d} {x}$ 的积分
+### 第二型积分
+
+形如 $\int_{-\infty}^{+\infty}{R(x)} \mathrm{d} {x}$ 的积分
 
 要求：
 
@@ -776,7 +780,9 @@ $$
 >
 > 其中， $z_k$ 是 $R(z)$ 在**上半平面内**的孤立奇点。
 
-### 形如 $\int_{-\infty}^{+\infty}{R(x)\mathrm{e}^{\mathrm{i}ax}} \mathrm{d} {x}$ 的积分
+### 第三型积分
+
+形如 $\int_{-\infty}^{+\infty}{R(x)\mathrm{e}^{\mathrm{i}ax}} \mathrm{d} {x}$ 的积分
 
 要求：
 
