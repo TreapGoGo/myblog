@@ -373,19 +373,19 @@ $$
 
 ### 柯西基本定理
 
-1. 设函数 $f(z)$ 在单连通域 $D$ 内解析， $\varGamma$ 为 $D$ 内的任意一条简单闭曲线，则有 $\displaystyle \oint_{\varGamma} {f(z)}\mathrm{d} {z}=0$ 。
-
-2. 设 $f(z)$ 在单连域 $D$ 内解析，在 $\overline{D}=D+C$ 上连续，则有 $\displaystyle\oint_{C} {f(z)}\mathrm{d} {z}=0$ 。
+> 1. 设函数 $f(z)$ 在单连通域 $D$ 内解析， $\varGamma$ 为 $D$ 内的任意一条简单闭曲线，则有 $\displaystyle \oint_{\varGamma} {f(z)}\mathrm{d} {z}=0$ 。
+> 
+> 2. 设 $f(z)$ 在单连域 $D$ 内解析，在 $\overline{D}=D+C$ 上连续，则有 $\displaystyle\oint_{C} {f(z)}\mathrm{d} {z}=0$ 。
 
 简单理解成：绕着实心域积一圈回到原点，等于没积。
 
 ### 闭路变形定理
 
-设 $f(z)$ 在双连通域 $D$ 内解析，在边界 $C=C_1+C_2^-$ 上连续， $\varGamma$ 是 $D$ 内的任意一条闭曲线，则有
-
-$$
-\oint_{C_1} {f(z)}\mathrm{d} {z} = \oint_{C_2} {f(z)}\mathrm{d} {z} = \oint_{\varGamma} {f(z)}\mathrm{d} {z}
-$$
+> 设 $f(z)$ 在双连通域 $D$ 内解析，在边界 $C=C_1+C_2^-$ 上连续， $\varGamma$ 是 $D$ 内的任意一条闭曲线，则有
+> 
+> $$
+ \oint_{C_1} {f(z)}\mathrm{d} {z} = \oint_{C_2} {f(z)}\mathrm{d} {z} = \oint_{\varGamma} {f(z)}\mathrm{d} {z}
+ $$
 
 简单理解成：
 
@@ -412,9 +412,9 @@ $$
 
 内容：解析函数在单连域内的积分之和起点和终点有关，而和路径无关。
 
-在单连通解析域 $D$ 中，假设 $C_1,C_2$ 是从 $z_0,z_1$ 的两条不同的曲线，则有
-
-$$
+> 在单连通解析域 $D$ 中，假设 $C_1,C_2$ 是从 $z_0,z_1$ 的两条不同的曲线，则有
+> 
+> $$
 \oint_{C_1} {f(z)}\mathrm{d} {z}=\oint_{C_2} {f(z)}\mathrm{d} {z}=\int_{z_0}^{z_1}{f(z)} \mathrm{d} {z}
 $$
 
@@ -428,9 +428,9 @@ $$
 
 称形如 $\displaystyle F(z)=\int_{z_0}^{z}{f(\xi)} \mathrm{d} {\xi}$ 的函数为积分上限函数，利用积分上限函数和复积分的运算规律，可以得出复积分的牛顿-莱布尼茨公式。
 
-若 $f(z)$ 在单连域 $D$ 内处处解析， $G(z)$ 为 $f(z)$ 的原函数，则有
-
-$$
+> 若 $f(z)$ 在单连域 $D$ 内处处解析， $G(z)$ 为 $f(z)$ 的原函数，则有
+> 
+> $$
 \int_{z_0}^{z_1}{f(z)} \mathrm{d} {z} = G(z_1) - G(z_0)
 $$
 
@@ -438,9 +438,9 @@ $$
 
 ### 柯西积分公式
 
-对于单连域：
-
-$$
+> 对于单连域 $\overline{D}=D+C$ 中的一点 $z_0$ ，有
+> 
+> $$
 f(z_0)=\frac{1}{2 \mathrm{\pi} \mathrm{i}}\oint_{C} {\frac{f(z)}{z-z_0}}\mathrm{d} {z}
 $$
 
@@ -459,9 +459,9 @@ $$
 
 ### 平均值公式
 
-如果函数 $f(z)$ 在 $|z-z_0|\le R$ 的圆域内解析，在圆内和圆周上连续，则有
-
-$$
+> 如果函数 $f(z)$ 在 $|z-z_0|\le R$ 的圆域内解析，在圆内和圆周上连续，则有
+> 
+> $$
 f(z_0)=\frac{1}{2 \mathrm{\pi}}\int_{0}^{2 \mathrm{\pi}}{f(z_0+R \mathrm{e}^{\mathrm{i}\theta})} \mathrm{d} {\theta}
 $$
 
@@ -473,7 +473,7 @@ $$
 
 ### 最大模定理
 
-如果函数 $f(z)$ 在 $D$ 内解析，且不为常数，则 $|f(z)|$ 在 $D$ 内没有最大值。
+> 如果函数 $f(z)$ 在 $D$ 内解析，且不为常数，则 $|f(z)|$ 在 $D$ 内没有最大值。
 
 注意，这里的 $D$ 不是 $\overline{D}$ ，也就是说不包含边界。
 
@@ -501,3 +501,53 @@ $$
 $$
 \oint_{C} {\frac{f(z)}{(z-z_0)^{n+1}}}\mathrm{d} {z} = \frac{2 \mathrm{\pi} \mathrm{i}}{n!} f^{(n)}(z_0)
 $$
+
+# 第三章 复级数
+
+## 第一节 复数项级数
+
+### 复数序列
+
+复数序列定义、极限、敛散性等基本概念，与实数数列类似。
+
+复数序列极限存在的充要条件：
+
+> 设 $\displaystyle z_n=x_n+\mathrm{i}y_n, a=\alpha+\mathrm{i}\beta$ ，
+> 
+> 则 $\displaystyle\lim_{n\to +\infty} {z_n}=a$ 的充要条件是 $\displaystyle \lim_{n\to +\infty} {x_n}=\alpha, \lim_{n\to +\infty} {y_n}=\beta$ 。
+
+证明略。
+
+用处：要求复数列的极限，需要把其通项公式的实部和虚部分离出来，分别求极限。
+
+推论：
+
+1.  $\{z_n\}$ 收敛  $\Rightarrow$  $\{|z_n|\}$ 收敛，反过来则推不出。
+2.  $\displaystyle \lim_{n\to +\infty} {|z_n|}=0 \Leftrightarrow \lim_{n\to +\infty} {z_n}=0$ 
+
+### 复数项级数
+
+复级数的定义、部分和、敛散性与实数项级数的定义类似。
+
+复级数收敛的充要条件：
+
+> 设 $\displaystyle z_n=x_n+\mathrm{i}y_n$ ，
+>
+> 则级数 $dis\sum z_n$ 收敛的充要条件是级数 $\sum x_n$ 和 $\sum y_n$ 都收敛。
+
+证明略。
+
+复级数收敛的必要条件：
+
+> 设 $\displaystyle z_n=x_n+\mathrm{i}y_n$ ，
+>
+> 则级数 $\sum z_n$ 收敛的必要条件是 $\displaystyle \lim_{n\to +\infty} {z_n} = 0$ 
+
+证明略。其实是显然的。如果数列的极限都不趋于 $0$ ，那么加起来肯定越加越大或者越加越小。
+
+绝对收敛与条件收敛与实数项级数类似。在 $|z_n|$ 收敛的条件下：
+
+1. 若 $\sum |z_n|$ 收敛，则称 $\sum z_n$ 绝对收敛。
+2. 若 $\sum |z_n|$ 发散， $\sum z_n$ 收敛，则称 $\sum z_n$ 条件收敛。
+
+### 第二节复变函数
