@@ -245,7 +245,7 @@ $$
 2. 定义域为 $z\ne0$ 。这是因为 $\ln|z|,\text{arg }z$ 在原点都没有意义，也可以理解为 $\mathrm{e}^w\ne0$ 。
 3.  $\text{Ln } z$ 的各个分支在除去原点和负实轴的复平面内连续且解析，且满足 $\displaystyle \frac{\mathrm{d} {\text{Ln }z}}{\mathrm{d} {z}}=\frac{\mathrm{d} {\ln {z}}}{\mathrm{d} {z}} = \frac{1}{z}$ 。
 
-### 幂函数
+#### 幂函数
 
 其定义为：
 
@@ -260,7 +260,7 @@ $$
 3.  $\displaystyle z^\frac{m}{n}=\sqrt[n]{z^m}$ 
 4.  若 $\alpha$ 为无理数或复数， $z^\alpha$ 一般是多值函数，此时处原点与负实轴外处处解析。
 
-### 三角函数
+#### 三角函数
 
 根据欧拉公式 $\mathrm{e}^{\mathrm{i}\theta}=\cos\theta+\mathrm{i}\sin\theta$ ，有 $\mathrm{e}^{-\mathrm{i}\theta}=\cos\theta-\mathrm{i}\sin\theta$ 
 
@@ -287,7 +287,7 @@ $$
 3. 所有三角公式依然适用。
 4. 有界性不成立，因为 $|\cos z|\le1,|\sin z|\le1$ 显然不满足。
 
-### 反三角函数
+#### 反三角函数
 
 运用三角函数的定义，求出使得 $\cos w=z$ 成立的 $w$ ，便可定义 $w=\text{Arccos }z$ 。
 
@@ -305,7 +305,7 @@ $$
 \text{Arctan }z = \frac{\mathrm{i}}{2} \text{Ln }\frac{\mathrm{i}+z}{\mathrm{i}-z}
 $$
 
-### 双曲函数与反双曲函数
+#### 双曲函数与反双曲函数
 
 略
 
