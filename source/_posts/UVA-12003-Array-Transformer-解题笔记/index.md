@@ -1,6 +1,7 @@
 ---
 title: UVA-12003 Array Transformer 解题笔记
 date: 2023-07-27 00:52:08
+categories: 题解
 tags: ["算法数据结构", "题解", "数据结构", "分块", "排序"]
 ---
 

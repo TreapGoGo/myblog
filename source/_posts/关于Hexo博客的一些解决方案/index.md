@@ -1,7 +1,8 @@
 ---
 title: 关于Hexo博客的一些解决方案
 date: 2023-06-28 21:19:47
-tags:
+categories: 其他
+tags: ["Web", "Hexo"]
 ---
 
 1. 若`generate`或`deploy`建站时遇到bug，尝试运行`hexo clean`清空缓存。

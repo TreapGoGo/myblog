@@ -1,6 +1,7 @@
 ---
 title: LOJ6669 Nauuo and Binary Tree 解题笔记
 date: 2023-08-24 23:27:34
+categories: 题解
 tags: ["算法数据结构", "题解", "数据结构", "树", "交互题", "树链剖分"]
 ---
 

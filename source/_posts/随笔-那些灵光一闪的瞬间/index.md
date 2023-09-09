@@ -1,8 +1,8 @@
 ---
 title: 随笔 那些灵光一闪的瞬间
 date: 2023-07-01 17:51:59
-tags:
-published: false
+categories: "其他"
+tags: ["随笔", "思维游戏"]
 ---
 
 ## 前言

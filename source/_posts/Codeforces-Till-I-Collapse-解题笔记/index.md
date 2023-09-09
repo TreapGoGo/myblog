@@ -1,7 +1,8 @@
 ---
 title: Codeforces-Till I Collapse 解题笔记
 date: 2023-07-30 23:12:25
-tags:
+categories: 题解
+tags: ["算法数据结构", "题解"]
 ---
 
 # 题目来源 
@@ -30,4 +31,4 @@ tags:
 
 复杂度为 $O(nk\sqrt{n}\log n)$ ，依然不是很优。
 
-为了优化，可以预处理出以每个点作为左端点
+先放着吧。

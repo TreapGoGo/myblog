@@ -1,6 +1,7 @@
 ---
 title: SPOJ Give Away 解题笔记
 date: 2023-07-30 22:43:14
+categories: 题解
 tags: ["算法数据结构", "题解", "数据结构", "分块", "排序"]
 ---
 

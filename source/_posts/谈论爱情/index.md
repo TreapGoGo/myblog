@@ -1,8 +1,8 @@
 ---
 title: 谈论爱情
 date: 2023-06-26 18:51:06
-tags:
-published: false
+categories: "哲学"
+tags: ["哲学", "伦理学"]
 ---
 
 ## 爱情的内涵

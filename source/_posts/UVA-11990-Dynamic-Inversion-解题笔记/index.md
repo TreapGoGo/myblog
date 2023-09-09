@@ -1,6 +1,7 @@
 ---
 title: UVA-11990 Dynamic Inversion 解题笔记
 date: 2023-07-27 03:12:20
+categories: 题解
 tags: ["算法数据结构", "题解", "数据结构", "分块", "排序", "树状数组"]
 ---
 
