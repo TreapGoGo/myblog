@@ -534,7 +534,7 @@ $$
 
 > 设 $\displaystyle z_n=x_n+\mathrm{i}y_n$ ，
 >
-> 则级数 $dis\sum z_n$ 收敛的充要条件是级数 $\sum x_n$ 和 $\sum y_n$ 都收敛。
+> 则级数 $\sum z_n$ 收敛的充要条件是级数 $\sum x_n$ 和 $\sum y_n$ 都收敛。
 
 证明略。
 
