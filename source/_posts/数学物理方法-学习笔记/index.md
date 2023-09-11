@@ -98,4 +98,54 @@ tags: ["学习笔记", "数学", "物理", "复变函数"]
 * 解微分方程的初值问题，如：拉普拉斯变换法；
 * 计算实积分，如：留数定理
 
-本篇的中心问题是解析函数的问题。
+本章的中心问题是解析函数的问题。
+
+#### 复数的概念
+
+复数的表示方法有两种：
+
+$$
+z=(x,y)=x+\mathrm{i}y
+$$
+
+因为复数和复平面上的点一一对应，所以可以写成坐标形式，但一般还是推荐写成多项式 $x+\mathrm{i}y$ 形式。
+
+复数的共轭：
+
+$$
+\overline{z}=x-\mathrm{i}y
+$$
+
+共轭体现在复平面上，其实就是某个点关于 $x$ 轴的对称点或镜像。
+
+复数的实部和虚部
+
+$$
+x=\text{Re}z
+$$
+
+$$
+y=\text{Im}z
+$$
+
+性质：
+
+1. 若 $z_1=x_1+\mathrm{i}y_1,z_2=x_2+\mathrm{i}y_2$ ，则 $\displaystyle z_1=z_2 \Leftrightarrow \begin{cases}x_1=x_2 \\ y_1=y_2\end{cases}$ 
+2.  $z$ 无大小，也不能比大小，只能判等。
+3. 对于有理运算 $R(a,b,c,\cdots)$ ，共轭复数满足 $\displaystyle\overline{R(a,b,c,\cdots)}=R(\overline{a},\overline{b},\overline{c},\cdots)$ 
+
+#### 复数的表示方法
+
+1. 几何表示
+   1. 点 $z$ 
+   2. 向量 $\overrightarrow{oz}$ 
+   3. 极坐标 $(\rho,\phi)$ 
+   4. 复球表示
+
+\t 上述表示方法在中， $z$ 的模 $\rho=|z|=|\overrightarrow{oz}|=\sqrt{x^2+y^2}$ 
+
+ $z$ 的辐角是多值， $\displaystyle\phi=\text{Arctg} \frac{y}{x}=\text{Arg}z$ 
+
+规定辐角主值 $\text{arg}z$ 满足
+
+2. 
