@@ -142,10 +142,32 @@ $$
    3. 极坐标 $(\rho,\phi)$ 
    4. 复球表示
 
-\t 上述表示方法在中， $z$ 的模 $\rho=|z|=|\overrightarrow{oz}|=\sqrt{x^2+y^2}$ 
+    上述表示方法在中， $z$ 的模 $\displaystyle\rho=|z|=|\overrightarrow{oz}|=\sqrt{x^2+y^2}$ 
 
- $z$ 的辐角是多值， $\displaystyle\phi=\text{Arctg} \frac{y}{x}=\text{Arg}z$ 
+    $z$ 的辐角是多值， $\displaystyle\phi=\text{Arctg} \frac{y}{x}=\text{Arg}z$ 
 
-规定辐角主值 $\text{arg}z$ 满足
+    规定辐角主值 $\text{arg}z$ 满足
 
-2. 
+$$
+-\mathrm{\pi} < \arg z \le \mathrm{\pi}
+$$
+
+$$
+\text{Arg}z=\arg z \pm 2k \mathrm{\pi},k=0,1,2,\cdots
+$$
+
+因为 $\displaystyle\arctan \frac{y}{x}$ 是一个单值函数，其值域是 $\displaystyle(-\frac{\mathrm{\pi}}{2},\frac{\mathrm{\pi}}{2})$ ，不能覆盖到 $\displaystyle(-\mathrm{\pi},\mathrm{\pi}]$ ，所以反正切求辐角主值必须加以修正。
+
+具体的， $\arg z$ 与 $\displaystyle\arctan \frac{y}{x}$ 的关系是
+
+$$
+\arg z = 
+\begin{cases}
+    \arctan \frac{y}{x}, & x>0,y>0 (\text{第一象限}) \\
+    \arctan \frac{y}{x}+\mathrm{\pi}, & x<0,y>0 (\text{第二象限})\\
+    \arctan \frac{y}{x}-\mathrm{\pi}, & x<0,y<0 (\text{第三象限}) \\
+    \arctan \frac{y}{x}, & x>0,y<0 (\text{第四象限})
+\end{cases}
+$$
+
+1. 
