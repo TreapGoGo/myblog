@@ -181,6 +181,10 @@ z=
 \end{cases}
 $$
 
+3. 黎曼球表示
+
+    规定 $\infty$ 为复平面上的无穷远点，其实部和虚部没有意义，但是可以作为整体参与运算。其运算规则与实变函数的无穷一样。
+
 #### 复数的运算
 
 复数的运算结果、运算规则都与实数相符合，且满足 $\mathrm{i} ^2 = -1$ 。
@@ -224,3 +228,82 @@ $$
 (\cos \varphi + \mathrm{i} \sin \varphi)^n = \cos n\varphi + \mathrm{i} \sin n\varphi \text{（棣莫弗公式）}
 $$
 
+#### 作业
+
+习题1.1: 1(2),(4); 2(3); 4(2); 6(2); 7(2)
+
+### 第二节 复变函数
+
+#### 定义
+
+> 设 $E$ 为一点集， $f(z):z\in E\rightarrow w=u+\mathrm{i}v$ ，其中 $u,v$ 为实数。
+> 
+> 则 $w=f(z)$ 为复变函数，其中 $z\in E$ ， $E$ 为定义域， $w$ 为值域。
+
+分类
+
+* 单值
+  * 单叶 $z\leftrightarrow w:(w=az+b)$ 
+  * 多叶 $\displaystyle z_1,z_2,z_3,\cdots \rightarrow w : (w=z^2)$  
+* 多值（例如 $\sqrt[3]{z}$ ）
+
+#### 几何意义
+
+将平面上的点集 $E$ 映射到点集 $F$ 。
+
+例如，点集 $|z|=1$ 经过 $w=z^2$ 映射之后到点集 $\{(1,0)\}$ 
+
+#### 区域
+
+此部分直观理解即可，不需要记定义。
+
+邻域：$\forall z\in|z-z_0|<\varepsilon$ 的点集称为 $z_0$ 的邻域。
+
+去心邻域：$0<|z-z_0|<\varepsilon$ 表示去心邻域。
+
+内点：若 $z_0$ 总有一个领域 $N(z_0,\varepsilon)$ 全含于点集 $\sigma$ 内，则称 $z_0$ 为 $\sigma$ 的内点。
+
+区域：若点集 $\sigma$ 满足：
+
+1. 全由内点组成
+2. 设 $z_1\in\sigma, z_2\in\sigma$ ，且 $z_1,z_2$ 可以用全在 $\sigma$ 中的折线连接。
+
+则称 $\sigma$ 是区域。
+
+区域不包含边界，因为边界上的点不是内点。
+
+外点：若 $z_0\notin \sigma$ 并且总有一个邻域 $N(z_0,\varepsilon)$ 不含有 $\sigma$ 的点，则称 $z_0$ 为 $\sigma$ 的外点。
+
+界点：若 $z_0\notin \sigma$ 并且有总一个邻域 $N(z_0,\varepsilon)$ 含有 $\sigma$ 的点，则称 $z_0$ 为 $\sigma$ 的界点。
+
+边界：全体界点构成区域的边界。
+
+边界正向：沿着边界走，区域总在左方，就是边界的正方向。简单理解为逆时针就是正方向。
+
+闭区域： $\overline{\sigma}=\sigma+l$ 。
+
+单连通区域：在区域内作任何简单闭曲线，曲线上的点都是属于此区域的。不能包含：“洞”或“点洞”
+
+复连通区域：如果一个区域不是单连通区域，就是复连通区域。
+
+#### 极限和连续性
+
+定义与实变类似，不需要记忆。
+
+> $w=f(z):\forall \varepsilon>0, \exist \delta>0,$ 如果 $0<|z-z_0|<\delta$ 时有 $|f(z)-w_0|<\varepsilon$ ，
+> 
+> 则 $\lim_{z\to z_0} {f(z)} = w_0$ 为极限
+
+> 若 $\lim_{z\to z_0} {f(z)} = f(z_0)$ ，
+> 
+> 则 $f(z)$ 在 $z_0$ 点连续。
+
+### 第三节 微商及解析函数
+
+#### 微商
+
+>  $w=f(z)$ 是 $z$ 点及 $N(z,\varepsilon)$ 上的单值函数，
+>
+> 若 $\displaystyle\lim_{\Delta z \to 0} {\frac{f(z+\Delta z) - f(z)}{\Delta z}}$ 存在极限，
+>
+> 则记 $\displaystyle f'(z) = \lim_{\Delta z\to 0} {\frac{\Delta f}{\Delta z}}$ ，称为 $f(z)$ 在 $z$ 点的导数。
