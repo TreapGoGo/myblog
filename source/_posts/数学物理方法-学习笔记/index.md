@@ -223,3 +223,4 @@ $$
 $$
 (\cos \varphi + \mathrm{i} \sin \varphi)^n = \cos n\varphi + \mathrm{i} \sin n\varphi \text{（棣莫弗公式）}
 $$
+
