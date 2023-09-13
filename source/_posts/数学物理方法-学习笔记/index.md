@@ -163,10 +163,10 @@ $$
 $$
 \arg z = 
 \begin{cases}
-    \arctan \frac{y}{x}, & x>0,y>0 (\text{第一象限}) \\
-    \arctan \frac{y}{x}+\mathrm{\pi}, & x<0,y>0 (\text{第二象限})\\
-    \arctan \frac{y}{x}-\mathrm{\pi}, & x<0,y<0 (\text{第三象限}) \\
-    \arctan \frac{y}{x}, & x>0,y<0 (\text{第四象限})
+    \arctan \frac{y}{x}, & x>0,y>0 \text{（第一象限）} \\
+    \arctan \frac{y}{x}+\mathrm{\pi}, & x<0,y>0 \text{（第二象限）}\\
+    \arctan \frac{y}{x}-\mathrm{\pi}, & x<0,y<0 \text{（第三象限）} \\
+    \arctan \frac{y}{x}, & x>0,y<0 \text{（第四象限）}
 \end{cases}
 $$
 
@@ -188,7 +188,7 @@ $$
 规定 $z_1=x_1+\mathrm{i}y_1, z_2=x_2+\mathrm{i}y_2$ 则有
 
 $$
-z_1+z_2=(x_1\pm x_2)+\mathrm{i}(y_1\pm y_2)
+z_1\pm z_2=(x_1\pm x_2)+\mathrm{i}(y_1\pm y_2)
 $$
 
 $$
@@ -209,4 +209,17 @@ $$
 
 $$
 (z_1+z_2)^n = \sum_{m=0}^n C_n^m z_1^m z_2^{n-m}
+$$
+
+$$
+z^n=|z|^n \mathrm{e}^{\mathrm{i}n\text{Arg}z}
+$$
+
+$$
+\sqrt[m]{z} = \sqrt[m]{|z|} \mathrm{e} ^ {\mathrm{i} \frac{\arg z + 2k \mathrm{\pi}}{m}},
+\begin{cases} k=0,1,2,\cdots,m-1, \\ m\ge2  \end{cases}
+$$
+
+$$
+(\cos \varphi + \mathrm{i} \sin \varphi)^n = \cos n\varphi + \mathrm{i} \sin n\varphi \text{（棣莫弗公式）}
 $$
