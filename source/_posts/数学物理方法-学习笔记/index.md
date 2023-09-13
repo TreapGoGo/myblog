@@ -170,4 +170,43 @@ $$
 \end{cases}
 $$
 
-1. 
+2. 代数表示
+   
+$$
+z=
+\begin{cases}
+    x+ \mathrm{i} y \\
+    \rho \cos \varphi +  \mathrm{i} \rho \sin \varphi \\
+    \rho  \mathrm{e} ^{ \mathrm{i} \varphi}
+\end{cases}
+$$
+
+#### 复数的运算
+
+复数的运算结果、运算规则都与实数相符合，且满足 $\mathrm{i} ^2 = -1$ 。
+
+规定 $z_1=x_1+\mathrm{i}y_1, z_2=x_2+\mathrm{i}y_2$ 则有
+
+$$
+z_1+z_2=(x_1\pm x_2)+\mathrm{i}(y_1\pm y_2)
+$$
+
+$$
+z_1\times z_2=(x_1x_2-y_1y_2)+\mathrm{i}(x_1y_2+y_1x_2)
+$$
+
+$$
+\mathrm{e}^{\mathrm{i}\phi_1} \cdot \mathrm{e}^{\mathrm{i}\phi_2} = \mathrm{e}^{\mathrm{i}(\phi_1+\phi_2)}
+$$
+
+$$
+\mathrm{e}^{\mathrm{i}\phi_1} / \mathrm{e}^{\mathrm{i}\phi_2} = \mathrm{e}^{\mathrm{i}(\phi_1-\phi_2)}
+$$
+
+$$
+z_1^2-z_2^2=(z_1+z_2)(z_1-z_2)
+$$
+
+$$
+(z_1+z_2)^n = \sum_{m=0}^n C_n^m z_1^m z_2^{n-m}
+$$
