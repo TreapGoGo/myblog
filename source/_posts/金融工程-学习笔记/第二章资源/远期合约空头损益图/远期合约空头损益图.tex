@@ -1,0 +1,14 @@
+\documentclass[UTF8]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{ctex}
+
+\begin{document}
+\begin{tikzpicture}
+    \draw[-latex] (-4,0) -- (4,0) node[above] {标的资产价格};
+    \draw[-latex] (0,-4) -- (0,4) node[left] {盈亏};
+
+    \draw[domain=0.5:4, thick] plot (\x, {-\x+2});
+    \node[below] at (2,0) {K};
+\end{tikzpicture}
+\end{document}
