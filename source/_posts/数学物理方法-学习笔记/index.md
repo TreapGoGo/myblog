@@ -302,9 +302,47 @@ $$
 
 #### 微商
 
+定义与实变类似。
+
 >  $w=f(z)$ 是 $z$ 点及 $N(z,\varepsilon)$ 上的单值函数，
 >
 > 若 $\displaystyle\lim_{\Delta z \to 0} {\frac{f(z+\Delta z) - f(z)}{\Delta z}}$ 存在极限，
 >
 > 则记 $\displaystyle f'(z) = \lim_{\Delta z\to 0} {\frac{\Delta f}{\Delta z}}$ ，称为 $f(z)$ 在 $z$ 点的导数。
 
+注意：
+
+* 如果极限没有注明方向， $\displaystyle \lim_{\Delta z\to 0} {\frac{\Delta f}{\Delta z}}$ 是指自变量从任意方向趋于 $0$ ，需要考虑整个平面内的趋近方式。
+* 可导必然连续，连续不一定可导，例如 $f(z)=\text{Re}z=x$ 在复平面中处处连续，但处处不可导。
+
+#### 可导的充分必要条件
+
+可导的必要条件：柯西-黎曼条件（C-R条件）
+
+$$
+\left\{
+\begin{aligned}
+    \displaystyle & \frac{\partial {u}}{\partial {x}} = \frac{\partial {v}}{\partial {y}} \\
+    \displaystyle & \frac{\partial {v}}{\partial {x}} = - \frac{\partial {u}}{\partial {y}}
+\end{aligned}
+\right.
+$$
+
+可导的充分条件：
+
+同时满足
+
+*  $u_x,u_y,v_x,v_y$ 均连续
+*  满足 C-R 条件
+
+#### 解析函数
+
+定义
+
+> 若 $w=f(z)$ 在点 $z_0$ 以及 $N(z_0,\varepsilon)$ 可导，则称 $w=f(z)$ 在 $z_0$ 点解析（Analytic,regular,holomorphic）。
+>
+> 若 $w=f(z)$ 在区域 $\sigma$ 内处处可导，则称 $w=f(z)$ 在区域 $\sigma$ 解析，记作 $f(z)\in H(\sigma)$ 。
+
+解析是比可导更加严苛的条件。解析必然可导，可导不一定解析。
+
+不解析的点成为**奇点**。
