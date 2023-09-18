@@ -345,4 +345,29 @@ $$
 
 解析是比可导更加严苛的条件。解析必然可导，可导不一定解析。
 
+如果确定谈论的 $\sigma$ 是一个区域，那么可导和解析就完全等价。
+
 不解析的点成为**奇点**。
+
+解析的必要条件、充分条件和可导是一样的。
+
+若 $f(z)=u+\mathrm{i}v \in H(\sigma)$ ，则有如下性质：
+
+* 设 $\displaystyle \Delta = \frac{\partial^2 {}}{\partial {x^2}} + \frac{\partial^2 {}}{\partial {y^2}}$ 为拉普拉斯算子，则有 $\displaystyle \Delta u = 0, \Delta v = 0$ 。
+*  $\nabla u \cdot \nabla v = 0$ 
+* 已知 $u,v$ 之一均可求出解析函数。
+* 解析函数的和差积商仍为解析函数。
+
+### 第四节 初等解析函数
+
+#### 幂函数
+
+* 定义
+
+$$
+w=z^n(0,\pm 1,\pm 2,\cdots)
+$$
+
+* 解析区域：除 $z=0$ 的复平面
+* 满足幂运算 $z^m \cdot z^n = z^{m+n}$ 
+* 对于多项式函数 $P(z),Q(z)$ ，有理函数 $\displaystyle w=\frac{P(z)}{Q(z)}$ 除了 $Q(z)=0$ 处外全部解析
