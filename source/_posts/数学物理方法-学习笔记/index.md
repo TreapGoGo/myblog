@@ -479,23 +479,29 @@ $$
 $$
 J=
 \begin{vmatrix}
-    \frac{\partial {u}}{\partial {x}} & \frac{\partial {u}}{\partial {y}} \\
-    \frac{\partial {v}}{\partial {x}} & \frac{\partial {v}}{\partial {y}}
+    \displaystyle\frac{\partial {u}}{\partial {x}} & \displaystyle\frac{\partial {u}}{\partial {y}} \\
+    \displaystyle\frac{\partial {v}}{\partial {x}} & \displaystyle\frac{\partial {v}}{\partial {y}}
 \end{vmatrix}
 \ne0
 $$
 
-具体地，
+具体地，借助 C-R 条件可以推出
 
 $$
 \begin{aligned}
     J & = 
         \begin{vmatrix}
-        \frac{\partial {u}}{\partial {x}} & \frac{\partial {u}}{\partial {y}} \\
-        \frac{\partial {v}}{\partial {x}} & \frac{\partial {v}}{\partial {y}}
+        \displaystyle\frac{\partial {u}}{\partial {x}} & \displaystyle\frac{\partial {u}}{\partial {y}} \\
+        \displaystyle\frac{\partial {v}}{\partial {x}} & \displaystyle\frac{\partial {v}}{\partial {y}}
         \end{vmatrix} \\
     & = \frac{\partial {u}}{\partial {x}}\frac{\partial {v}}{\partial {y}}-\frac{\partial {v}}{\partial {x}}\frac{\partial {u}}{\partial {y}} \\
     & = \left(\frac{\partial {u}}{\partial {x}}\right)^2 + \left(\frac{\partial {u}}{\partial {y}}\right)^2 \\
-    & = \left|\frac{\partial {u}}{\partial {x}}-\mathrm{i}\frac{\partial {u}}{\partial {y}}\right|^2
+    & = \left|\frac{\partial {u}}{\partial {x}}-\mathrm{i}\frac{\partial {u}}{\partial {y}}\right|^2  \\
+    & = |f'(z)|^2 \ne 0
 \end{aligned}
 $$
+
+结论：
+
+> 若 $w=f(z)$ 是区域 $\sigma$ 中的解析函数，且 $f'(z)\ne0$ ，则变换 $w=f(z)$ 在区域 $\sigma$ 上构成一一对应的单叶变换。
+
