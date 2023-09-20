@@ -1,0 +1,33 @@
+\documentclass[UTF8]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{ctex}
+
+\begin{document}
+\begin{tikzpicture}
+    \draw[-latex] (0,0) -- (6,0) node[right] {$x_1$};
+    \draw[-latex] (0,0) -- (0,6) node[above] {$x_2$};
+
+    \draw[domain=0:3, thick] plot (\x, {-\x+3});
+    \node[left] at (0,3) {$m'/p_2$};
+    \node[below] at (3,0) {$m'/p_1$};
+
+    % \node at (3,2) { $p_1x_1+p_2x_2=m$};
+
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (3,0);
+    \coordinate (C) at (0,3);
+    \fill[yellow!20] (A) -- (B) -- (C) -- cycle;
+
+    \draw[domain=0:5, thick] plot (\x, {-\x+5});
+    \node[left] at (0,5) {$m/p_2$};
+    \node[below] at (5,0) {$m/p_1$};
+
+    \coordinate (D) at (5,0);
+    \coordinate (E) at (0,5);
+    \fill[red!20] (D) -- (B) -- (C) -- (E) -- cycle;
+
+    \draw[->] (2.5,2.5) -- (1.5,1.5) node[right] {$m->m'$};
+
+\end{tikzpicture}
+\end{document}

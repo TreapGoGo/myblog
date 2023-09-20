@@ -1,0 +1,26 @@
+\documentclass[UTF8]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{ctex}
+
+\begin{document}
+\begin{tikzpicture}
+    \draw[-latex] (0,0) -- (4,0) node[right] {$x_1$};
+    \draw[-latex] (0,0) -- (0,4) node[above] {$x_2$};
+
+    \draw[domain=0:3, thick] plot (\x, {-\x+3});
+    \node[left] at (0,3) {$m/p_2$};
+    \node[below] at (3,0) {$m/p_1$};
+
+    \node at (2,3) { $p_1x_1+p_2x_2=m$};
+
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (3,0);
+    \coordinate (C) at (0,3);
+    \fill[yellow!20] (A) -- (B) -- (C) -- cycle;
+
+    \fill[purple] (1,1) circle (2pt) node[below] {可行消费束};
+    \fill[red] (2,2) circle (2pt) node[below right] {不可行消费束};
+
+\end{tikzpicture}
+\end{document}
