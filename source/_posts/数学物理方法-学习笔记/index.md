@@ -486,3 +486,16 @@ J=
 $$
 
 具体地，
+
+$$
+\begin{aligned}
+    J & = 
+        \begin{vmatrix}
+        \frac{\partial {u}}{\partial {x}} & \frac{\partial {u}}{\partial {y}} \\
+        \frac{\partial {v}}{\partial {x}} & \frac{\partial {v}}{\partial {y}}
+        \end{vmatrix} \\
+    & = \frac{\partial {u}}{\partial {x}}\frac{\partial {v}}{\partial {y}}-\frac{\partial {v}}{\partial {x}}\frac{\partial {u}}{\partial {y}} \\
+    & = \left(\frac{\partial {u}}{\partial {x}}\right)^2 + \left(\frac{\partial {u}}{\partial {y}}\right)^2 \\
+    & = \left|\frac{\partial {u}}{\partial {x}}-\mathrm{i}\frac{\partial {u}}{\partial {y}}\right|^2
+\end{aligned}
+$$
