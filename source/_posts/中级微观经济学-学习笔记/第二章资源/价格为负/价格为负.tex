@@ -1,0 +1,18 @@
+\documentclass[UTF8]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{ctex}
+
+\begin{document}
+\begin{tikzpicture}
+    \draw[-latex] (0,0) -- (4,0) node[right] {$x_1$};
+    \draw[-latex] (0,0) -- (0,4) node[above] {$x_2$};
+
+    \draw[domain=0:1.5, purple, ultra thick] plot (\x, {\x*2+1});
+    \node[left] at (0,1) {10};
+
+    \fill[green!50] (0,0) -- (0,1) -- (1.5,4) -- (4,4) -- (4,0) -- cycle;
+
+    \node at (2,2) {预算集};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,20 @@
+\documentclass[UTF8]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{ctex}
+
+\begin{document}
+\begin{tikzpicture}
+    \draw[-latex] (0,0) -- (5,0) node[right] {$x_1$};
+    \draw[-latex] (0,0) -- (0,6) node[above] {$x_2$};
+
+    \draw[domain=0:2.5, green, ultra thick] plot (\x, {-\x+5});
+    \draw[domain=2.5:3.75, green, ultra thick] plot (\x, {-\x*2+7.5});
+
+    \fill[yellow!20] (0,5) -- (0,0) -- (3.75,0) -- (2.5,2.5) -- cycle;
+
+    \node[green] at (3,3) {预算约束};
+    \node at (1,1) {预算集};
+
+\end{tikzpicture}
+\end{document}

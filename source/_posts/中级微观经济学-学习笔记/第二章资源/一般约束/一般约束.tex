@@ -1,0 +1,24 @@
+\documentclass[UTF8]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{patterns}
+\usepackage{ctex}
+
+\begin{document}
+\begin{tikzpicture}
+    \draw[-latex] (0,0) -- (4,0) node[right] {食品};
+    \draw[-latex] (0,0) -- (0,4) node[above] {其他商品};
+
+    \draw[yellow] (1,0) -- (1,4);
+    \fill[pattern=north west lines, pattern color=yellow] (1,0) -- (1,4) -- (4,4) -- (4,0) -- cycle;
+
+    \draw[green] (0,2) -- (4,0);
+    \fill[pattern=north east lines, pattern color=green] (0,0) -- (0,2) -- (4,0) -- cycle;
+
+    \draw[purple] (0,4) -- (3,0);
+    \fill[pattern=dots, pattern color=purple] (0,0) -- (0,4) -- (3,0) -- cycle;
+
+    \node at (2,-0.5) {选择集};
+    \draw[-latex, ultra thick] (2,-0.3) -- (1.7,0.5);
+\end{tikzpicture}
+\end{document}

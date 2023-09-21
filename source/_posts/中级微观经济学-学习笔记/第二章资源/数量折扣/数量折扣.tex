@@ -1,0 +1,32 @@
+\documentclass[UTF8]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{ctex}
+
+\begin{document}
+\begin{tikzpicture}
+    \draw[-latex] (0,0) -- (6,0) node[right] {$x_1$};
+    \draw[-latex] (0,0) -- (0,6) node[above] {$x_2$};
+
+    \draw[domain=0:2.5, thick, dashed, red] plot (\x, {-\x*2+5});
+    \draw[domain=1:4, thick, dashed, blue] plot (\x, {-\x+4});
+
+    \draw[domain=0:1.01, ultra thick, green] plot (\x, {-\x*2+5.09});
+    \draw[domain=1:4.05, ultra thick, green] plot (\x, {-\x+4.06});
+
+    \node[left] at (0,5) {$100$};
+    \node[below] at (1,0) {$40$};
+    \node[below] at (2.5,0) {$50$};
+    \node[below] at (4,0) {$80$};
+
+    \fill[yellow!20] (0,5) -- (0,0) -- (4,0) -- (1,3) -- cycle;
+
+    \draw[dashed] (1,0) -- (1,3);
+
+    \node[align=center, red] at (1.5,5) {斜率=$-2$\\$p_1=2,p_2=1$};
+    \node[align=center, blue] at (3.5,2.5) {斜率=$-1$\\$p_1=1,p_2=1$};
+
+    \node[green] at (2,3.5) {预算约束};
+
+\end{tikzpicture}
+\end{document}
