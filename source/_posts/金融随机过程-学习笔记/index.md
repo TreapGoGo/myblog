@@ -1,0 +1,102 @@
+---
+title: 金融随机过程 学习笔记
+date: 2023-10-05 16:24:23
+tags:
+---
+
+# 前言
+
+本文是本人自学清华大学出版社《随机过程及其在金融领域中的应用》时的同步笔记。
+
+# 第 3 章 随机过程
+
+## 随机过程的基本概念
+
+随机过程  $\{X(\omega, t): \omega\in\Omega,t\in T\}$ 是关于时间参数 $t$ 和样本点 $\omega$ 的二元函数。它的自变量类型是两个数值（离散的或连续的），它的函数值类型是一个随机变量集合。简单理解，随机过程将 **二维平面上的某点** 映射到 **某个随机变量集合** 。有时可以简单表示成 $\{X_t(\omega)\}, \{X_t\}$ 或 $\{X(t)\}$  。
+
+下面的伪代码可以帮助理解随机过程的定义。
+
+```python
+import RandomVariable
+
+class RandomProcess:
+    def __init__(omega: double, t:double) -> list:
+        random_variables = []
+        ...
+        v = do_something(omega, t)
+        random_variables.append(RandomVariable(v))
+        ...
+        return random_variables
+```
+
+* 对于确定的时间 $t_0$ ， $X(w, t_0)$ 是概率空间上的一维随机变量。
+
+* 对于确定的样本点 $\omega_0$ ， $X(w, t_0)$ 是定义在 $T$ 上的实函数，称为对应于 $\omega_0$ 的一个样本函数（或样本轨道、实现）。
+
+对于每一时刻 $t_1\in T$ ， $X_{t_1}$ 是一维随机变量，其一维分布函数为 
+
+$$
+F_{t_1} = P(X_{t_1}\le x_1)
+$$
+
+类似地，对于任意两个时刻 $t_1,t_2\in T$ ，随机过程的取值有 $X_{t_1},X_{t_2}$ 两个，其二维分布函数为
+
+$$
+F_{t_1,t_2}(x_1,x_2) = P(X_{t_1}\le x_1, X_{t_2}\le x_2)
+$$
+
+拓展到 $n$ 维，可得 $n$ 维联合分布函数
+
+$$
+F(x_1,\cdots,x_n; t_1,\cdots,t_n) = P(X_{t_1}\le x_1,\cdots,X_{t_n}\le x_n)
+$$
+
+ $n$ 维联合密度函数为
+
+$$
+f(x_1,\cdots,x_n; t_1,\cdots,t_n)
+$$
+
+可见，**分布函数和密度函数的维度数等于时间点的个数**。如果时间集 $T$ 是有限集，那么分布函数的全体
+
+$$
+\{F(x_1,\cdots,x_n; t_1,\cdots,t_n): n\ge1, t_1,\cdots,t_n\in T\}
+$$
+
+称为随机过程 $\{X_t\}$ 的有穷维分布函数。
+
+## 随机过程的数字特征
+
+由于随机过程本质上就是二维随机变量，其数字特征与二维随机变量的数字特征完全一致，没有特别之处。
+
+对于任一时间 $t\in T$ ，随机过程 $\{X_t\}$ 的数学期望定义为
+
+$$
+\mu_{X_t} = E(X_t) = \int_{-\infty}^{+\infty}{x} \mathrm{d} {F_t(x)} = \int_{-\infty}^{+\infty}{xf_t(x)} \mathrm{d} x
+$$
+
+方差定义为
+
+$$
+\sigma_{X_t}^2 = V(X_t) = E[(X_t-E(X_t))^2]
+$$
+
+二阶中心矩定义为
+
+$$
+E(X_t^2) = \int_{-\infty}^{+\infty}{x^2} \mathrm{d} {F_t(x)} = \int_{-\infty}^{+\infty}{x^2f_t(x)} \mathrm{d} x
+$$
+
+对于任意 $t_1,t_2\in T$ ，其协方差函数定义为
+
+$$
+c_X(t_1,t_2) = \sigma_{X_{t_1},X_{t_2}} = E((X_{t_1}-E(X_{t_1}))(X_{t_2}-E(X_{t_2})))
+$$
+
+相关函数定义为
+
+$$
+R(t_1,t_2) = E(X_{t_1}X_{t_2})
+$$
+
+如果 $\forall t\in T$ 都有 $E(X_t^2) < +\infty$ ，称 $\{X_t, t\in T\}$ 为实二阶矩过程。
