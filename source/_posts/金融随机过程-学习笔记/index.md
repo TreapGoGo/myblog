@@ -100,3 +100,22 @@ R(t_1,t_2) = E(X_{t_1}X_{t_2})
 $$
 
 如果 $\forall t\in T$ 都有 $E(X_t^2) < +\infty$ ，称 $\{X_t, t\in T\}$ 为实二阶矩过程。
+
+## 正态随机过程
+
+如果随机过程 $\{X_t\}$ 的任意 $n$ 维分布都是正态分布，则称为正态随机过程或高斯随机过程。其概率密度为
+
+$$
+\begin{aligned}
+    f(x_1,\cdots,x_n; t_1,\cdots,t_n) 
+    & = \frac{1}{(2\pi)^{n/2}(\det \bm{\Sigma})^{1/2}} \exp \left\{-\frac{1}{2}(\bm x-\bm\mu)\bm \Sigma^{-1}(\bm x-\bm\mu)^T\right\} \\
+    & = \frac{1}{(2\pi)^{n/2}\sigma_{X_1}\cdots\sigma_{X_n}} \exp \left\{-\frac{1}{2}\sum_{i=1}^n \frac{(x_i-\mu_{X_i})^2}{\sigma_{X_i}^2}\right\} \\
+    & = \prod_{i=1}^n \frac{1}{\sqrt{2\pi}\sigma_{X_i}} \exp \left\{-\frac{(x_i-\mu_{X_i})^2}{2\sigma_{X_i}^2}\right\} \\
+    & = f(x_1;t_1) \cdots f(x_n;t_n)
+\end{aligned}
+$$
+
+也就是说，正态过程在 $n$ 个不同时刻 $t_1,\cdots,t_n$ 采样，得到的一族随机变量两两互不相关，相互独立。对于正态过程，不相关与独立是等价的。
+
+## 泊松过程
+
