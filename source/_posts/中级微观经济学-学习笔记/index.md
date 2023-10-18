@@ -354,7 +354,7 @@ $$
 
 对于严格凸的无差异曲线，**边际替代率递减**（diminishing marginal rate of substitution）。
 
-# 效用
+# 第四章 效用
 
 在当代的消费者行为理论中，效用是衡量消费者偏好（consumer preferences）的一种方法而已，而不是衡量幸福的指标。
 
@@ -435,3 +435,62 @@ MRS = -\frac{\partial V / \partial x_1}{\partial V / \partial x_2} = -\frac{f'(U
 $$
 
 即单调变换不会改变 $MRS$ 。
+
+# 第五章 选择
+
+## 理性
+
+假设：决策者总是在他的可选范围内选择他最偏好的策略。
+
+![理性约束选择](./第五章资源/理性约束选择.png)
+
+ $(x_1^*,x_2^*)$ 是最受偏好的可行消费束，称为最优选择（optimal choice）。此时的需求称为消费者的一般需求，可以用 $x_1^*(p_1,p_2,m),x_2^*(p_1,p_2,m)$ 来表示。
+
+理想状态下，此时无差异曲线与预算约束线相切，
+
+例外1：无差异曲线出现拐折（kink），在拐点没有切线。
+
+![拐折](./第五章资源/拐折.png)
+
+例外2：边界最优（boundary optimum），某种商品的消费量为 $0$ ，但无差异曲线与预算线依然不相切。
+
+![边界最优](./第五章资源/边界最优.png)
+
+例外3：非凸性偏好
+
+![非凸性偏好](./第五章资源/非凸性偏好.png)
+
+## 效用最大化
+
+方法 1 ：利用价格之比等于边际替代率的结论进行计算
+
+方法 2 ：拉格朗日乘数法
+
+为了计算
+
+$$
+\max u(x_1,x_2)
+\\
+\text{ s.t. } p_1x_1+p_2x_2-m=0
+$$
+
+设拉格朗日函数
+
+$$
+L = u(x_1,x_2) - \lambda(p_1x_1+p_2x_2-m)
+$$
+
+那么最优选择 $(x_1^*,x_2^*)$ 必然同时满足
+
+$$
+\left\{
+\begin{aligned}
+    \frac{\partial {L}}{\partial {x_1}} = \frac{\partial {u(x_1^*,x_2^*)}}{\partial {x_1}} - \lambda p_1 = 0 \\
+    \frac{\partial {L}}{\partial {x_2}} = \frac{\partial {u(x_1^*,x_2^*)}}{\partial {x_2}} - \lambda p_2 = 0 \\
+    \frac{\partial {L}}{\partial {\lambda}} = p_1x_1+p_2x_2-m = 0
+\end{aligned}
+\right.
+$$
+
+# 第六章 需求
+
