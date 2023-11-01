@@ -530,3 +530,174 @@ $$
 * 曲率为负的时候，曲面可以局部保角变换映射到双曲平面上；
 
 拉普拉斯方程在保角变换下仍为新平面内的拉普拉斯方程，泊松方程在保角变换下仍为新平面内的泊松方程。 
+
+# 第二篇 数学物理方程
+
+## 第六章 定解问题
+
+### 三类数学物理方程
+
+#### 波动方程
+
+$$
+u_{tt} = a^2 \Delta u + f
+$$
+
+是一个双曲型方程。
+
+其中，可以认为 $t$ 是时间， $u$ 为波动位移， $a$ 是波速， $f$ 是与源有关的函数
+
+$$
+u_{tt} = \frac{\partial^2 {u}}{\partial {t^2}}
+$$
+
+$$
+\Delta = \frac{\partial^2 }{\partial {x^2}} + \frac{\partial^2 }{\partial {y^2}} + \frac{\partial^2 }{\partial {z^2}}
+$$
+
+#### 输运方程
+
+$$
+u_t = D \Delta u + f
+$$
+
+是一个抛物型方程。
+
+其中， $u$ 为浓度， $D$ 为系数， $f$ 为与源有关的已知量。
+
+$$
+u_t = \frac{\partial {u}}{\partial {t}}
+$$
+
+#### 泊松方程
+
+$$
+\Delta u = -h
+$$
+
+是一个椭圆型方程。
+
+其中， $u$ 为稳定物理量（ $u$ 不随时间变化） ， $h$ 为与源有关的已知量。
+
+其实，泊松方程就是输运方程的特殊情况，即 $u_t=0$ 的情况。
+
+#### 共同点
+
+都是二阶线性偏微分方程。
+
+### 用数理方程研究物理问题的步骤
+
+* 提出定解问题
+  * 泛定方程
+  * 定解条件
+  * 定解问题
+* 求解
+  * 行波法（或达朗贝尔解法）
+  * 分离变量法
+  * 积分变换法
+  * 格林函数（或积分公式）法
+  * 变分法
+* 分析解答
+  * 存在性
+  * 唯一性
+  * 稳定性
+  * 同时满足以上三个条件，就成为其是适定的（适当且确定的）
+
+### 三类数理方程的导出
+
+### 弦的横振动方程
+
+细长而柔软的弦线紧绷于 $A,B$ 两点之间，作振幅极微小的横振动，求其运动规律。
+
+研究弦的位移 $u(x,t)$ ，假设线密度与位移无关（即 $\rho(x,t) = \rho(t)$ ），重力为零，且有 $u_x\approx0$ 。
+
+考虑一段 $\Delta x$ 的受力情况。
+
+* 在 $x$ 方向： $-T_1\cos\alpha_1 + T_2\cos\alpha_2 = 0$ 
+* 在 $y$ 方向：$F(x+\eta_1\Delta x,t)\Delta x-T_1\sin\alpha_1+ T_2\sin\alpha_2 = (\rho\Delta x)u_{tt}(x+\eta\Delta x,t)$ 
+
+其中 $F(x,t)$ 表示单位长度所受的外力。 
+
+根据 $\cos\alpha=\sqrt{1-\sin^2\alpha}\approx1$ ，代入原式，得到 $T_1=T_2=T$ 。
+
+考虑到 $u_x = \tan\alpha$ ，可以得出 $\displaystyle \sin\alpha = \frac{\tan\alpha}{\sqrt{1+\tan^2\alpha}} = \frac{u_x}{\sqrt{1+u_x^2}} \approx u_x$ ，于是原方程化为
+
+$$
+\begin{aligned}
+    (\rho\Delta x)u_{tt}(x+\eta\Delta x,t) &= T[u_x(x+\Delta x,t) - u_x(x,t)] + F(x+\eta_1\Delta x,t)\Delta x \\
+    u_{tt}(x+\eta\Delta x,t) &= \frac{T}{\rho}\frac{u_x(x+\Delta x,t) - u_x(x,t)}{\Delta x} + \frac{1}{\rho} F(x+\eta_1\Delta x,t)
+\end{aligned}
+$$
+
+左右两边求极限，令 $\Delta x \to 0$ ，得到
+
+$$
+u_{tt} = a^2u_{xx} + f(x,t)
+$$
+
+这就是弦的横振动方程，其中 $\displaystyle a^2=\frac{T}{\rho}, f(x,t)=\frac{F(x,t)}{\rho}$ 
+
+如果外力为 $0$ ，就退化为自由振动方程 $u_{tt} = a^2u_{xx}$ 
+
+### 热传导方程
+
+* 比热：单位物质升高一度需要的热量 $\displaystyle c=\frac{Q}{\rho VT}$ 
+* 热流密度：单位时间内流过单位面积的热量 $\displaystyle q=\frac{Q}{tS}$ 
+* 傅里叶实验定理：热流密度与温度的下降率成正比，即 $\displaystyle q=-k\frac{\partial {T}}{\partial {n}}$ ，其中 $k$ 为导热率， $n$ 为截面法向
+* 热源强度：单位时间内单位体积放出的热量 $\displaystyle F=\frac{Q}{tV}$ 
+
+设 $u(x,t)$ 表示杆上 $x$ 点在 $t$ 时刻的温度。
+
+* 单位时间内使其温度升高的热量 $Q = c(\rho S\Delta x)\Delta T = c\rho S\Delta x[u(x,t+\Delta t)-u(x,t)]=c\rho S\Delta xu_t$ 
+* 单位时间内流入的热量 $\displaystyle Q_1 = q\Delta tS = -k\left.\frac{\partial {T}}{\partial {n}}\right|_{x} \Delta tS = -ku_x(x,t)S\Delta t$ 
+* 单位时间内流出的热量 $\displaystyle Q_2 = q\Delta tS = -k\left.\frac{\partial {T}}{\partial {n}}\right|_{x+\Delta x} \Delta tS = -ku_x(x+\Delta x,t)S\Delta t$
+* 内部热源产生的热量 $Q_3 = FV\Delta t = FS\Delta x\Delta t$ 
+
+根据能量守恒定律，单位时间内流入 $\Delta x$ 段的**净**热量加上内部热源产生的热量，就等于使其温度产生变化的热量，即
+
+$$
+\begin{aligned}
+    Q &= Q_1 - Q_2 + Q_3 \\
+    c\rho S\Delta xu_t &= -ku_x(x,t)S\Delta t +ku_x(x+\Delta x,t)S\Delta t + FS\Delta x\Delta t \\
+    u_t &= \frac{1}{c\rho} \left[k \frac{u_x(x+\Delta x,t) - u_x(x,t)}{\Delta x} + F\right] \\
+    u_t &= \frac{k}{c\rho}u_{xx} + \frac{F}{c\rho} \\
+    u_t &= Du_{xx} + f(x,t)
+\end{aligned}
+$$
+
+### 泊松方程
+
+在充满了介电常数 $\varepsilon$ 的介质区域有体密度为 $\rho(x,y,z)$ 的电荷，求此区域中的静电场分布。
+
+研究的问题： $E=-\nabla V$ ，其中 $V$ 为标量电势， $\nabla$ 为哈密顿算子， $\displaystyle\nabla = \frac{\partial }{\partial {x}}\overrightarrow{i} + \frac{\partial }{\partial {y}}\overrightarrow{j} + \frac{\partial }{\partial {z}}\overrightarrow{k}$ 
+
+（哈密顿算子与拉普拉斯算子的关系是 $\Delta=\nabla^2=\nabla\cdot\nabla$ ）
+
+奥-高定理：通过一封闭面的净余电通量等于该平面内所有电荷的代数和。
+
+选择一个封闭曲面 $S$ ，围出空间区域 $\tau$ ，由奥-高定理有
+
+$$
+\oint_{S} {\overrightarrow{E}}\mathrm{d} {\overrightarrow{s}} = \frac{1}{\varepsilon} \int_\tau{\rho} \mathrm{d} {\tau}
+$$
+
+根据高斯公式有
+
+$$
+\oint_{S} {\overrightarrow{E}}\mathrm{d} {\overrightarrow{s}} = \int_\tau{\nabla}\overrightarrow{E} \mathrm{d} {\tau}
+$$
+
+可得
+
+$$
+\frac{1}{\varepsilon} \int_\tau{\rho} \mathrm{d} {\tau} = \int_\tau{\nabla}\overrightarrow{E} \mathrm{d} {\tau}
+$$
+
+等式恒成立，即 $\displaystyle \nabla \overrightarrow{E} = \frac{\rho}{\varepsilon}$ 。
+
+将 $E=-\nabla V$ 化为 $\nabla E=-\nabla\cdot\nabla V = -\Delta V$ ，再代入上式可得
+
+$$
+\Delta V = -\frac{1}{\varepsilon}\rho
+$$
+
