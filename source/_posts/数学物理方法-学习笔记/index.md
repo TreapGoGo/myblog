@@ -700,4 +700,3 @@ $$
 $$
 \Delta V = -\frac{1}{\varepsilon}\rho
 $$
-
