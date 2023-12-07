@@ -804,3 +804,4 @@ $$
 $$
 \int_{-\infty}^{+\infty}{f(x)} \mathrm{d} {x} = 2 \mathrm{\pi} \mathrm{i} \sum_{k=1}^m \text{Res}[f(z),z_k] + \mathrm{\pi} \mathrm{i} \sum_{k=1}^n \text{Res}[f(z),x_k]
 $$
+

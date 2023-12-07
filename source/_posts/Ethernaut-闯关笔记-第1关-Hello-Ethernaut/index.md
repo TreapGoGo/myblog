@@ -4,7 +4,7 @@ date: 2023-11-16 10:28:45
 tags:
 ---
 
-按F12启动审查元素，点击“Console”，在其中按照题目要求输入指令，逐步解决谜题
+点击 get new instance ，按 F12 键启动审查元素，点击“Console”，在其中按照题目要求输入指令，逐步解决谜题
 
 ```javascript
 player
