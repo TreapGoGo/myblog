@@ -60,6 +60,7 @@ contract ForceHack{
 
 # 冷知识
 
-`selfdestruct` 已被标记为 `deprecated` ，在 EIP-4758 中被废除并将其 opcode 修改为 `SENDALL` 。
+`selfdestruct` 已被标记为 `deprecated` ，在 [EIP-4758](https://eips.ethereum.org/EIPS/eip-4758) 中被废除并将其 opcode 修改为 `SENDALL` 。
 
 `SENDALL` 只发送全部的 ETH 余额，但不会删除合约的 bytecode 。
+

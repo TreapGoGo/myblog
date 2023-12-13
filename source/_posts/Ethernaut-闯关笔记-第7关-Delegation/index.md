@@ -56,7 +56,7 @@ contract Delegation {
 * `delegatecall` ：调用后内置变量 `msg.sender` 的值A不会修改为调用者，但执行环境为调用者的运行环境B
 * `callcode` ：调用后内置变量 `msg.sender` 的值会修改为调用者B，但执行环境为调用者的运行环境B
 
-以上内容节选自(这篇博客)[https://blog.csdn.net/weixin_43982484/article/details/125218458]
+以上内容节选自[这篇博客](https://blog.csdn.net/weixin_43982484/article/details/125218458)
 
 与此相关的攻击常用于多签钱包。
 
